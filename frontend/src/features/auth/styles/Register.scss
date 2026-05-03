@@ -1,0 +1,113 @@
+$primary-color: #667eea;
+$secondary-color: #764ba2;
+$white: #ffffff;
+$dark-gray: #333333;
+$gray: #555555;
+$light-gray: #666666;
+$border-gray: #dddddd;
+$error-bg: #fadbd8;
+$error-color: #e74c3c;
+$border-radius: 5px;
+
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  .register-box {
+    background: $white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+
+    h1 {
+      text-align: center;
+      color: $dark-gray;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .error {
+      color: $error-color;
+      background: $error-bg;
+      padding: 10px;
+      border-radius: $border-radius;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    form {
+      .form-group {
+        margin-bottom: 20px;
+
+        label {
+          display: block;
+          margin-bottom: 8px;
+          color: $gray;
+          font-weight: 500;
+        }
+
+        input {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid $border-gray;
+          border-radius: $border-radius;
+          font-size: 14px;
+          transition: border-color 0.3s;
+          box-sizing: border-box;
+
+          &:focus {
+            outline: none;
+            border-color: $primary-color;
+          }
+        }
+      }
+
+      .btn {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+        color: $white;
+        border: none;
+        border-radius: $border-radius;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s;
+        margin-top: 10px;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
+      }
+    }
+
+    .footer-text {
+      text-align: center;
+      margin-top: 20px;
+      color: $light-gray;
+      font-size: 14px;
+
+      a {
+        color: $primary-color;
+        text-decoration: none;
+        font-weight: 600;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
